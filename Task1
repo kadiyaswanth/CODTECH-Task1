@@ -1,0 +1,20 @@
+/*This is the code for blinking an LED light,and this is connected to an Arduino.
+The first line remembers which pin the LED is plugged into.The setup() part runs only once when the Arduino starts up.
+Inside setup(),it tells the arduinno that the choosen pin will be used to send electricity out to the LED.
+The loop() part runs repeatedly,forever.Inside loop(),it first sends electricity to the LED,turning it on.
+Then it pauses for one second.After the pause it stops sending electricity,turning the LED off.Then it pauses again for one second.
+This on-off cycle repeats continuously,making the LED blink.*/
+
+const int led=12;
+void setup()
+{
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(led, HIGH);
+  delay(1000); //1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(1000); //1000 millisecond(s)
+}
